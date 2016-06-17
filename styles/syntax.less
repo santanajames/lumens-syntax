@@ -1,69 +1,5 @@
-@import "syntax-variables";
-
-atom-text-editor, :host {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
-
-  .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-  }
-
-  .indent-guide {
-    color: @syntax-indent-guide-color;
-  }
-
-  .invisible-character {
-    color: @syntax-invisible-character-color;
-  }
-
-  .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-gutter-text-color;
-
-    .line-number {
-      &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
-      }
-
-      &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
-      }
-    }
-  }
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: @mute;
-  }
-
-  .invisible {
-    color: @syntax-text-color;
-  }
-
-  .cursor {
-    color: @syntax-cursor-color;
-  }
-
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
-}
-
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
-  background-color: transparent;
-  border: 1px solid @syntax-result-marker-color;
-}
-
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
-  border: 1px solid @syntax-result-marker-color-selected;
-}
-
 .comment {
-  color: @mute;
+  color: @dark-tertiary;
 }
 
 .keyword {
@@ -74,7 +10,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.operator {
-    color: @syntax-text-color;
+    color: @color-text;
   }
 
   &.other.special-method {
@@ -94,7 +30,7 @@ atom-text-editor .search-results .marker.current-result .region,
   color: @orange;
 
   &.character.escape {
-    color: @cyan;
+    color: @lime;
   }
 
   &.numeric {
@@ -102,7 +38,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.other.color {
-    color: @cyan;
+    color: @lime;
   }
 
   &.other.symbol {
@@ -118,7 +54,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.parameter.function {
-    color: @syntax-text-color;
+    color: @color-text;
   }
 }
 
@@ -132,7 +68,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
 
   &.regexp {
-    color: @cyan;
+    color: @lime;
 
     .source.ruby.embedded {
       color: @orange;
@@ -147,14 +83,14 @@ atom-text-editor .search-results .marker.current-result .region,
 .punctuation {
   &.definition {
     &.comment {
-      color: @mute;
+      color: @dark-tertiary;
     }
 
     &.string,
     &.variable,
     &.parameters,
     &.array {
-      color: @syntax-text-color;
+      color: @color-text;
     }
 
     &.heading,
@@ -185,7 +121,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.function  {
-    color: @cyan;
+    color: @lime;
 
     &.any-method {
       color: @blue;
@@ -246,12 +182,12 @@ atom-text-editor .search-results .marker.current-result .region,
 
   &.separator {
     background-color: @dark-secondary;
-    color: @syntax-text-color;
+    color: @color-text;
   }
 }
 
 .none {
-  color: @syntax-text-color;
+  color: @color-text;
 }
 
 .markup {
@@ -299,9 +235,4 @@ atom-text-editor .search-results .marker.current-result .region,
   &.heading {
     color: @green;
   }
-}
-
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
-  padding-left: 1px;
 }

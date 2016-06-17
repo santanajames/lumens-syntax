@@ -4,15 +4,15 @@
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: @dark-primary;
-@syntax-cursor-color: @dark-secondary;
+@color-text: @dark-primary;
+@color-cursor: @dark-secondary;
 @syntax-selection-color: @light-secondary;
 @syntax-background-color: @light-primary;
 
 // Guide colors
-@syntax-wrap-guide-color: @mute;
-@syntax-indent-guide-color: @mute;
-@syntax-invisible-character-color: @mute;
+@syntax-wrap-guide-color: @light-tertiary;
+@syntax-indent-guide-color: @light-tertiary;
+@syntax-invisible-character-color: @light-tertiary;
 
 // For find and replace markers
 @syntax-result-marker-color: @yellow;
@@ -21,11 +21,29 @@
 // Gutter colors
 @syntax-gutter-text-color: @dark-tertiary;
 @syntax-gutter-text-color-selected: @dark-secondary;
-@syntax-gutter-background-color: @light-secondary;
-@syntax-gutter-background-color-selected: @light-tertiary;
+@syntax-gutter-background-color: @light-primary;
+@syntax-gutter-background-color-selected: @light-primary;
+@syntax-gutter-line-number-fold-marker: @dark-tertiary;
 
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: @blue;
 @syntax-color-added: @green;
 @syntax-color-modified: @orange;
 @syntax-color-removed: @red;
+
+// Language entity colors
+@syntax-color-variable:  @red;
+@syntax-color-constant:  @orange;
+@syntax-color-property:  @color-text;
+@syntax-color-value:     @green;
+@syntax-color-function:  @blue;
+@syntax-color-method:    @blue;
+@syntax-color-class:     @yellow;
+@syntax-color-keyword:   @purple;
+@syntax-color-tag:       @red;
+@syntax-color-attribute: @orange;
+@syntax-color-import:    @purple;
+@syntax-color-snippet:   @green;
+@syntax-color-regexp:    @yellow;
+@syntax-color-symbol:    @red;
+
