@@ -21,7 +21,6 @@ atom-text-editor, :host {
 
     .line-number {
       &.cursor-line {
-        background-color: @color-gutter-background-line-number;
         color: @color-gutter-text-selected;
       }
 
@@ -35,7 +34,6 @@ atom-text-editor, :host {
   .gutter .line-number:after,
   .fold-marker:after {
     color: @color-gutter-text-folded;
-    
   }
 
   .invisible {
@@ -49,26 +47,48 @@ atom-text-editor, :host {
   .cursor-line {
     background-color: @color-cursor-line;
   }
-  
-  .selection .region {
-    background-color: @color-selection;
-  }
+}
+
+
+// Line selection colors for blurred and focused editors
+.editor { 
+    .selection .region {
+      background-color: @color-selection-blurred;
+    }
+    
+    .gutter {
+      .line-number {
+        &.cursor-line {
+            background-color: @color-gutter-background-line-number-blurred;
+            }
+        }
+    }
+    
+    &.is-focused {
+        .selection .region {
+            background-color: @color-selection-focused;
+        }
+        
+        .gutter {
+          .line-number {
+            &.cursor-line {
+                background-color: @color-gutter-background-line-number;
+                }
+            }
+        }
+    }
 }
 
 atom-text-editor::shadow .highlight.find-result .region {
-  background-color: fade(@yellow, 15%);
-  border: 1px solid fade(@light-tertiary, 70%);
-  border-radius: 4px;
-  display: inline-block;
+  background-color: @color-result-marker;
+  border: 1px solid @light-tertiary;
   z-index: -1;
 }
 
 atom-text-editor::shadow .highlight.current-result .region,
 atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
-    background-color: @yellow;
-    border: 1px solid @light-tertiary;
-    border-radius: 4px;
-    display: inline-block;
+    background-color: @color-result-marker-selected;
+    border: 1px solid @mute;
     z-index: -1;
 }
 

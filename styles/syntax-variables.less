@@ -6,7 +6,9 @@
 // General colors
 @color-text: @dark-primary;
 @color-cursor: @dark-secondary;
-@color-selection: @light-secondary;
+@color-selection: @yellow;
+@color-selection-blurred: @light-secondary;
+@color-selection-focused: @color-selection;
 @color-background: @light-primary;
 
 // Guide colors
@@ -15,8 +17,8 @@
 @color-invisible-character: @light-tertiary;
 
 // For find and replace markers
-@color-result-marker: @yellow;
-@color-result-marker-selected: @yellow;
+@color-result-marker: lighten(@yellow, 15%);
+@color-result-marker-selected: darken(@yellow, 15%);
 
 // Gutter colors
 @color-gutter-text: @dark-tertiary;
@@ -24,7 +26,8 @@
 @color-gutter-text-folded: @light-tertiary;
 @color-gutter-background: @light-primary;
 @color-gutter-background-selected: @light-primary;
-@color-gutter-background-line-number: darken(@color-selection, 5%);
+@color-gutter-background-line-number: darken(@color-selection-focused, 15%);
+@color-gutter-background-line-number-blurred: darken(@color-selection-blurred, 15%);
 
 // Line colors
 @color-cursor-line: @color-background;
