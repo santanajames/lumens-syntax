@@ -24,35 +24,43 @@
 @color-gutter-text-folded: @light-tertiary;
 @color-gutter-background: @light-primary;
 @color-gutter-background-selected: @light-primary;
+@color-gutter-background-line-number: darken(@color-selection, 5%);
 
 // Line colors
-@color-cursor-line: fade(@color-selection, 30%);
+@color-cursor-line: @color-background;
 
 // For git diff info. i.e. in the gutter
-@color-renamed: @blue;
-@color-added: @green;
+@color-renamed : @blue;
+@color-added   : @green;
 @color-modified: @orange;
-@color-removed: @red;
+@color-removed : @red;
 
 // Language entity colors
-@color-attribute: @orange;
-@color-class:     @yellow;
-@color-comment:   @light-tertiary;
-@color-constant:  @orange;
-@color-control:   @purple;
-@color-function:  @blue;
-@color-import:   @red;
-@color-keyword:   @red;
-@color-method:    @blue;
-@color-operator:  @color-text;
-@color-property:  @color-text;
-@color-regexp:    @orange;
-@color-snippet:   @green;
-@color-string:    @green;
-@color-symbol:    @green;
-@color-tag-bracket: @mute;
-@color-tag:       @mute;
-@color-value:     @green;
+@color-attribute     : @orange;
+@color-class         : @orange;
+@color-comment       : @light-tertiary;
+@color-constant      : @orange;
+@color-control       : @purple;
+@color-function      : @blue;
+@color-import        : @red;
+@color-keyword       : @red;
+@color-keyword-new   : @blue-dark;
+@color-method        : @blue;
+@color-number        : @green;
+@color-operator      : @color-text;
+@color-property      : @color-text;
+@color-regexp        : @orange;
+@color-snippet       : @green;
+@color-string        : @green;
+@color-string-quote  : @dark-tertiary;
+@color-symbol        : @green;
+@color-tag-bracket   : @mute;
+@color-tag           : @blue;
+@color-value         : @green;
 @color-variable-param: @color-text;
-@color-variable:  @purple;
+@color-variable      : @purple;
+
+// JSON colors
+@color-json-dictionary-key: @blue-dark;
+@color-json-dictionary-value: @blue-light;
 

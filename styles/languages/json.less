@@ -1,0 +1,25 @@
+.source.json {
+    .punctuation {
+        &.definition {
+            color: @color-string-quote;   
+        }
+    }
+    
+    .string {
+        color: @color-json-dictionary-key;    
+    }
+    
+    .dictionary {
+        &.value {
+            .string {
+                color: @color-json-dictionary-value;
+                
+                .punctuation {
+                    &.definition {
+                        color: @color-string-quote;   
+                    }
+                }
+            }
+        }
+    }
+}
