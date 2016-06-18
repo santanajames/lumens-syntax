@@ -6,44 +6,53 @@
 // General colors
 @color-text: @dark-primary;
 @color-cursor: @dark-secondary;
-@syntax-selection-color: @light-secondary;
-@syntax-background-color: @light-primary;
+@color-selection: @light-secondary;
+@color-background: @light-primary;
 
 // Guide colors
-@syntax-wrap-guide-color: @light-tertiary;
-@syntax-indent-guide-color: @light-tertiary;
-@syntax-invisible-character-color: @light-tertiary;
+@color-wrap-guide: @light-tertiary;
+@color-indent-guide: @light-tertiary;
+@color-invisible-character: @light-tertiary;
 
 // For find and replace markers
-@syntax-result-marker-color: @yellow;
-@syntax-result-marker-color-selected: @yellow;
+@color-result-marker: @yellow;
+@color-result-marker-selected: @yellow;
 
 // Gutter colors
-@syntax-gutter-text-color: @dark-tertiary;
-@syntax-gutter-text-color-selected: @dark-secondary;
-@syntax-gutter-background-color: @light-primary;
-@syntax-gutter-background-color-selected: @light-primary;
-@syntax-gutter-line-number-fold-marker: @dark-tertiary;
+@color-gutter-text: @dark-tertiary;
+@color-gutter-text-selected: @dark-secondary;
+@color-gutter-text-folded: @light-tertiary;
+@color-gutter-background: @light-primary;
+@color-gutter-background-selected: @light-primary;
+
+// Line colors
+@color-cursor-line: fade(@color-selection, 30%);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: @blue;
-@syntax-color-added: @green;
-@syntax-color-modified: @orange;
-@syntax-color-removed: @red;
+@color-renamed: @blue;
+@color-added: @green;
+@color-modified: @orange;
+@color-removed: @red;
 
 // Language entity colors
-@syntax-color-variable:  @red;
-@syntax-color-constant:  @orange;
-@syntax-color-property:  @color-text;
-@syntax-color-value:     @green;
-@syntax-color-function:  @blue;
-@syntax-color-method:    @blue;
-@syntax-color-class:     @yellow;
-@syntax-color-keyword:   @purple;
-@syntax-color-tag:       @red;
-@syntax-color-attribute: @orange;
-@syntax-color-import:    @purple;
-@syntax-color-snippet:   @green;
-@syntax-color-regexp:    @yellow;
-@syntax-color-symbol:    @red;
+@color-attribute: @orange;
+@color-class:     @yellow;
+@color-comment:   @light-tertiary;
+@color-constant:  @orange;
+@color-control:   @purple;
+@color-function:  @blue;
+@color-import:   @red;
+@color-keyword:   @red;
+@color-method:    @blue;
+@color-operator:  @color-text;
+@color-property:  @color-text;
+@color-regexp:    @orange;
+@color-snippet:   @green;
+@color-string:    @green;
+@color-symbol:    @green;
+@color-tag-bracket: @mute;
+@color-tag:       @mute;
+@color-value:     @green;
+@color-variable-param: @color-text;
+@color-variable:  @purple;
 

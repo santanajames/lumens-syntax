@@ -1,18 +1,26 @@
 .comment {
-  color: @dark-tertiary;
+  color: @color-comment;
 }
 
 .keyword {
-  color: @purple;
-
+  color: @color-keyword;
+  
+  &.import {
+    color: @color-import;
+  }
+  
   &.control {
-    color: @purple;
+    color: @color-control;
+    
+    &.import {
+      color: @color-import;
+    }
   }
 
   &.operator {
-    color: @color-text;
+    color: @color-operator;
   }
-
+  
   &.other.special-method {
     color: @blue;
   }
@@ -42,17 +50,21 @@
   }
 
   &.other.symbol {
-    color: @green;
+    color: @color-symbol;
   }
 }
 
 .variable {
-  color: @red;
+  color: @color-variable;
 
+  &.parameter {
+    color: @color-variable-param;
+  }
+  
   &.interpolation {
     color: darken(@red, 10%);
   }
-
+  
   &.parameter.function {
     color: @color-text;
   }
@@ -60,15 +72,15 @@
 
 .invalid.illegal {
   background-color: @red;
-  color: @syntax-background-color;
+  color: @color-background;
 }
 
 .string {
-  color: @green;
+  color: @color-string;
 
 
   &.regexp {
-    color: @lime;
+    color: @color-regexp;
 
     .source.ruby.embedded {
       color: @orange;
@@ -83,14 +95,18 @@
 .punctuation {
   &.definition {
     &.comment {
-      color: @dark-tertiary;
+      color: @color-comment;
     }
-
+    
+    &.tag {
+        color: @color-tag-bracket;   
+    }
+    
     &.string,
     &.variable,
     &.parameters,
     &.array {
-      color: @color-text;
+      color: @color-string;
     }
 
     &.heading,
@@ -99,7 +115,7 @@
     }
 
     &.bold {
-      color: @light-orange;
+      color: @color-text;
       font-weight: bold;
     }
 
@@ -121,28 +137,28 @@
   }
 
   &.function  {
-    color: @lime;
+    color: @color-function;
 
     &.any-method {
-      color: @blue;
+      color: @color-function;
     }
   }
 }
 
 .entity {
   &.name.function {
-    color: @blue;
+    color: @color-function;
   }
   &.name.type {
-    color: @light-orange;
-    text-decoration: underline;
+    color: @color-text;
   }
 
   &.other.inherited-class {
     color: @green;
   }
   &.name.class, &.name.type.class {
-    color: @light-orange;
+    color: @orange;
+    text-decoration: underline;
   }
 
   &.name.section {
@@ -150,16 +166,11 @@
   }
 
   &.name.tag {
-    color: @red;
-    text-decoration: underline;
+    color: @color-tag;
   }
 
   &.other.attribute-name {
     color: @orange;
-
-    &.id {
-      color: @blue;
-    }
   }
 }
 

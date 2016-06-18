@@ -1,31 +1,32 @@
 atom-text-editor, :host {
-  background-color: @syntax-background-color;
+  background-color: @color-background;
   color: @color-text;
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    background-color: @color-wrap-guide;
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    color: @color-indent-guide;
   }
 
   .invisible-character {
-    color: @syntax-invisible-character-color;
+    color: @color-invisible-character;
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-gutter-text-color;
+    background-color: @color-gutter-background;
+    color: @color-gutter-text;
+    min-width: 0em;
 
     .line-number {
       &.cursor-line {
-        background-color: @syntax-gutter-background-color-selected;
-        color: @syntax-gutter-text-color-selected;
+        background-color: @color-cursor-line;
+        color: @color-gutter-text-selected;
       }
 
       &.cursor-line-no-selection {
-        color: @syntax-gutter-text-color-selected;
+        color: @color-gutter-text-selected;
       }
     }
   }
@@ -33,7 +34,8 @@ atom-text-editor, :host {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @syntax-gutter-line-number-fold-marker;
+    color: @color-gutter-text-folded;
+    
   }
 
   .invisible {
@@ -44,19 +46,30 @@ atom-text-editor, :host {
     color: @color-cursor;
   }
 
+  .cursor-line {
+    background-color: @color-cursor-line;
+  }
+  
   .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: @color-selection;
   }
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
-  background-color: pink;
+atom-text-editor::shadow .highlight.find-result .region {
+  background-color: fade(@yellow, 15%);
+  border: 1px solid fade(@light-tertiary, 70%);
+  border-radius: 4px;
+  display: inline-block;
+  z-index: -1;
 }
 
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
-  background-color: pink;
+atom-text-editor::shadow .highlight.current-result .region,
+atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
+    background-color: @yellow;
+    border: 1px solid @light-tertiary;
+    border-radius: 4px;
+    display: inline-block;
+    z-index: -1;
 }
 
 atom-text-editor[mini] .scroll-view,
