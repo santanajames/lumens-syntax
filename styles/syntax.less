@@ -73,15 +73,20 @@
 
   &.parameter {
     color: @color-variable-param;
+      
+    &.function {
+      color: @color-variable-param;
+    }
+  }
+  
+  &.module.other {
+    color: @color-text;     
   }
   
   &.interpolation {
     color: darken(@red, 10%);
   }
   
-  &.parameter.function {
-    color: @color-text;
-  }
 }
 
 .invalid.illegal {
@@ -150,7 +155,7 @@
 
 .support {
   &.class {
-    color: @orange-light;
+    color: @orange;
   }
 
   &.function  {
@@ -166,9 +171,10 @@
   &.name.function {
     color: @color-function;
   }
-  &.name.type {
-    color: @color-text;
-  }
+
+  // &.name.type {
+  //   color: @color-text;
+  // }
 
   &.other.inherited-class {
     color: @green;
@@ -193,7 +199,10 @@
 
 .meta {
   &.class {
-    color: @orange-light;
+      > .name {
+        color: @color-class;
+        text-decoration: underline;
+    }
   }
 
   &.link {

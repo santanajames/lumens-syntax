@@ -1,6 +1,23 @@
 .source.ts, 
 .source.tsx {
-    
+
+    .meta {
+        &.type {
+            &.primitive,
+            &.name {
+                color: @color-modifier;
+            }
+            
+            &.paren.cover {
+                .name {
+                    color: @color-text;
+                }
+                .name + .name {
+                    color: @color-modifier;
+                }
+            }
+        }
+    }
 }
 
 // Override atom-typescript plugin style.
