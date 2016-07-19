@@ -1,13 +1,16 @@
 {
   "name": "lumens-syntax",
   "theme": "syntax",
-  "version": "0.1.0",
-  "description": "A short description of your syntax theme",
+  "version": "0.0.0",
+  "description": "A beautifully design syntax to be easy on the eye.",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "light",
+    "dark"
   ],
-  "repository": "https://github.com/atom/lumens-syntax",
+  "repository": "https://github.com/santanajames/lumens-syntax",
+  "bugs": "https://github.com/santanajames/lumens-syntax/issues",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
