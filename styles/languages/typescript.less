@@ -1,35 +1,35 @@
-.source.ts, 
-.source.tsx {
-
-    .meta {
-        &.type {
-            &.primitive,
-            &.name {
-                color: @color-modifier;
-            }
-            
-            &.paren.cover {
-                .name {
-                    color: @color-text;
-                }
-                .name + .name {
-                    color: @color-modifier;
-                }
-            }
-        }
-    }
-}
-
-// Override atom-typescript plugin style.
-atom-text-editor::shadow {
-    .source.ts .require.path, 
-    .source.tsx .require.path, 
-    .source.ts .reference.path, 
-    .source.tsx .reference.path, 
-    .source.ts .es6import.path, 
-    .source.tsx .es6import.path, 
-    .source.ts .amd.path, 
-    .source.tsx .amd.path.source.ts .require.path {
-        text-decoration: none;
-    }
-}
+// .source.ts, 
+// .source.tsx {
+// 
+//     .meta {
+//         &.type {
+//             &.primitive,
+//             &.name {
+//                 color: @color-modifier;
+//             }
+//             
+//             &.paren.cover {
+//                 .name {
+//                     color: @color-text;
+//                 }
+//                 .name + .name {
+//                     color: @color-modifier;
+//                 }
+//             }
+//         }
+//     }
+// }
+// 
+// // Override atom-typescript plugin style.
+// atom-text-editor::shadow {
+//     .source.ts .require.path, 
+//     .source.tsx .require.path, 
+//     .source.ts .reference.path, 
+//     .source.tsx .reference.path, 
+//     .source.ts .es6import.path, 
+//     .source.tsx .es6import.path, 
+//     .source.ts .amd.path, 
+//     .source.tsx .amd.path.source.ts .require.path {
+//         text-decoration: none;
+//     }
+// }

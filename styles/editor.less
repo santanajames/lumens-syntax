@@ -1,7 +1,49 @@
+// Editor Styles
 atom-text-editor, :host {
+  
+  // General
   background-color: @color-background;
   color: @color-text;
 
+  // Gutter
+  .gutter {
+    background-color: @color-gutter-background;
+    color: @color-gutter-text;
+    min-width: 0;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @color-gutter-background-line-number;
+        color: @color-gutter-background-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @color-gutter-text-selected;
+      }
+      
+      &.folded,
+      &:after,
+      .fold-marker:after {
+        color: @color-gutter-text-folded;
+      }
+    }
+  }
+
+  // Invisibles
+  
+  // Lines 
+  .line-number {
+    &.cursor-line {
+        background-color: @color-gutter-background-line-number-blurred;
+        }
+    }
+    
+    
+  
+  // Cursor & Selection
+  
+  // Focus & Blur
+  
   .wrap-guide {
     background-color: @color-wrap-guide;
   }
@@ -14,28 +56,7 @@ atom-text-editor, :host {
     color: @color-invisible-character;
   }
 
-  .gutter {
-    background-color: @color-gutter-background;
-    color: @color-gutter-text;
-    min-width: 0em;
-
-    .line-number {
-      &.cursor-line {
-        color: @color-gutter-text-selected;
-      }
-
-      &.cursor-line-no-selection {
-        color: @color-gutter-text-selected;
-      }
-    }
-  }
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: @color-gutter-text-folded;
-  }
-
+  
   .invisible {
     color: @color-text;
   }
@@ -52,30 +73,12 @@ atom-text-editor, :host {
     background-color: @color-selection-blurred;
   }
   
-  .gutter {
-    .line-number {
-      &.cursor-line {
-          background-color: @color-gutter-background-line-number-blurred;
-          }
-      }
-  }
-  
   &.is-focused {
       .selection .region {
           background-color: @color-selection-focused;
       }
-      
-      .gutter {
-        .line-number {
-          &.cursor-line {
-              background-color: @color-gutter-background-line-number;
-              }
-          }
-      }
   }
 }
-
-
 
 atom-text-editor::shadow .highlight.find-result .region {
   background-color: @color-result-marker;
@@ -90,7 +93,7 @@ atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .regio
     z-index: -1;
 }
 
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
-  padding-left: 1px;
-}
+// atom-text-editor[mini] .scroll-view,
+// :host([mini]) .scroll-view {
+//   padding-left: 1px;
+// }

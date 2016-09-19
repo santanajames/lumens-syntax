@@ -1,22 +1,27 @@
 @dark-primary   : #22211b;
-@dark-secondary : #39372d;
-@dark-tertiary  : #4f4c40;
-@mute           : #666252;
-@light-tertiary : #a4a08e;
-@light-secondary: #b6b3a4;
-@light-primary  : #c9c6bb;
+@dark-secondary : lighten(@dark-primary, 5%);
+@dark-tertiary  : lighten(@dark-primary, 20%);
+@mute           : lighten(@dark-primary, 30%);
+@light-tertiary : lighten(@dark-primary, 40%);
+@light-secondary: lighten(@dark-primary, 50%);
+@light-primary  : lighten(@dark-primary, 60%);
 
+@blue           : #008d9f;
+@blue-dark      : darken(@blue, 10%);
+@blue-light     : lighten(@blue, 10%);
 
-@blue           : #589daa;
-@blue-dark      : #00638f;
-@blue-light     : #1eb1f0;
-@cyan           : #00dbdb;
 @green          : #76a752;
-@lime           : #8bfb8a;
-@orange         : #dd9218;
-@orange-light   : #ffbe54;
+@green-dark     : darken(@green, 10%);
+@green-light    : lighten(@green, 10%);
+
+@orange         : #d59e46;
+@orange-dark    : darken(@orange, 10%);
 @yellow         : #ffe677;
+
 @purple         : #b35b7f;
-@violet         : #8359ab;
+@purple-dark    : darken(@purple, 10%);
+@purple-light   : lighten(@purple, 10%);
+
 @red            : #cc2f2f;
-@red-dark       : #990000;
+@red-dark       : darken(@red, 10%);
+@red-light      : lighten(@red, 10%);

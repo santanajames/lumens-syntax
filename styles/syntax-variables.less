@@ -1,22 +1,20 @@
-@import "colors";
-
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
 // General colors
 @color-background: @dark-primary;
 @color-text: @light-primary;
-@color-cursor: @dark-secondary;
+@color-text-mute: @mute;
 @color-selection: @yellow;
 @color-selection-blurred: @light-secondary;
 @color-selection-focused: @color-selection;
 
 // Guide colors
-@color-wrap-guide: @light-tertiary;
-@color-indent-guide: @light-tertiary;
-@color-invisible-character: @light-tertiary;
+@color-wrap-guide: @dark-secondary;
+@color-indent-guide: @dark-secondary;
+@color-invisible-character: @dark-secondary;
 
-// For find and replace markers
+// Find and replace markers
 @color-result-marker: lighten(@yellow, 15%);
 @color-result-marker-selected: darken(@yellow, 20%);
 
@@ -25,14 +23,16 @@
 @color-gutter-background-selected: @dark-secondary;
 @color-gutter-background-line-number: @color-selection-focused;
 @color-gutter-background-line-number-blurred: @color-selection-blurred;
-@color-gutter-text: @dark-tertiary;
-@color-gutter-text-selected: @mute;
-@color-gutter-text-folded: @mute;
 
+@color-gutter-text: @mute;
+@color-gutter-text-selected: @mute;
+@color-gutter-text-folded: @light-secondary;
 
 // Line colors
-@color-cursor-line: @color-background;
-// 
+@color-cursor: @red;
+@color-cursor-line: @dark-secondary;
+
+
 // For git diff info. i.e. in the gutter
 @color-renamed : @blue;
 @color-added   : @green;
@@ -42,7 +42,7 @@
 // Language entity colors
 @color-attribute     : @orange;
 @color-class         : @orange;
-@color-comment       : @light-tertiary;
+@color-comment       : @color-text-mute;
 @color-constant      : @orange;
 @color-control       : @red;
 @color-function      : @blue;
@@ -64,8 +64,3 @@
 @color-value         : @green;
 @color-variable-param: @color-text;
 @color-variable      : @purple;
-
-// JSON colors
-@color-json-dictionary-key: @blue-dark;
-@color-json-dictionary-value: @blue-light;
-
