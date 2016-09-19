@@ -47,37 +47,35 @@ atom-text-editor, :host {
   .cursor-line {
     background-color: @color-cursor-line;
   }
+  
+  .selection .region {
+    background-color: @color-selection-blurred;
+  }
+  
+  .gutter {
+    .line-number {
+      &.cursor-line {
+          background-color: @color-gutter-background-line-number-blurred;
+          }
+      }
+  }
+  
+  &.is-focused {
+      .selection .region {
+          background-color: @color-selection-focused;
+      }
+      
+      .gutter {
+        .line-number {
+          &.cursor-line {
+              background-color: @color-gutter-background-line-number;
+              }
+          }
+      }
+  }
 }
 
 
-// Line selection colors for blurred and focused editors
-.editor { 
-    .selection .region {
-      background-color: @color-selection-blurred;
-    }
-    
-    .gutter {
-      .line-number {
-        &.cursor-line {
-            background-color: @color-gutter-background-line-number-blurred;
-            }
-        }
-    }
-    
-    &.is-focused {
-        .selection .region {
-            background-color: @color-selection-focused;
-        }
-        
-        .gutter {
-          .line-number {
-            &.cursor-line {
-                background-color: @color-gutter-background-line-number;
-                }
-            }
-        }
-    }
-}
 
 atom-text-editor::shadow .highlight.find-result .region {
   background-color: @color-result-marker;
